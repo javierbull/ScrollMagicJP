@@ -4,31 +4,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap|Flamenco" rel="stylesheet">
     <title>ScrollMagic</title>
   </head>
   <body>
-    <header class="header parallax" id="header">
+    
       <!-- menu de navegacion --------------------------------------->
       <div class="nav">
         <div class="container nav-flex sticky">
           <h1 class="header_logo">
-            <a href="#">ARTESANA</a>
+            <a href="#">ScrollMagic</a>
           </h1>
           <div class="menu">
-            <a href="#header" class="btn-bg-gray">Inicio</a>
-            <a href="#about" class="btn-bg-gray">Nosotros</a>
-            <a href="#productos" class="btn-bg-gray">Productos</a>
-            <a href="#" class="btn-bg-gray">Iniciar Sesión</a>
-            <a href="#" class="btn-light"><span>Registrarse</span></a>
-            <a href="#" class="btn-bg-gray">Ayuda</a>
+            <a href="#header" class="btn-bg-gray" id="high1">Inicio</a>
+            <a href="#about" class="btn-bg-gray" id="high2">Nosotros</a>
+            <a href="#productos" class="btn-bg-gray" id="high3">Productos</a>
+            <a href="#" class="btn-bg-gray" id="high4">Ayuda</a>
           </div>
         </div>
 
       </div>
       <!-- fin menu de navegacion ---------------------------------------->
 
+      <!-- main -->
+
+
+
+
+
+
+            <section class="demo margintop1 yellow" id="sec1">
+                <p>INICIO</p>
+            </section>
+
+
+            <section class="demo green" id="sec2">
+                <p>NOSOTROS</p>
+            </section>
+
+
+            <section class="demo orange" id="sec3">
+                <p>PRODUCTOS</p>
+            </section>
+
+
+            <section class="demo purple" id="sec4">
+                <p>AYUDA</p>
+            </section>
+
+
+
+      <!-- fin del main -->
       <script type="text/javascript" src="js/lib/greensock/tweenMax.min.js"></script>
       <script type="text/javascript" src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
       <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+
+      <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+      <script type="text/javascript" src="js/lib/highlight.pack.js"></script>
+      <script type="text/javascript" src="js/lib/modernizr.custom.min.js"></script>
+      <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+      <script>
+        // init controller
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 485}});
+
+        // build scenes
+        new ScrollMagic.Scene({triggerElement: "#sec1"})
+                .setClassToggle("#high1", "active") // add class toggle
+                .addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec2"})
+                .setClassToggle("#high2", "active") // add class toggle
+                .addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec3"})
+                .setClassToggle("#high3", "active") // add class toggle
+                .addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec4"})
+                .setClassToggle("#high4", "active") // add class toggle
+                .addIndicators() // add indicators (requires plugin)
+                .addTo(controller);
+      </script>
   </body>
 </html>
