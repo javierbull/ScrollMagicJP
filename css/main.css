@@ -100,7 +100,7 @@ table {
 
 .menu a {
 
-  /* color: #3a3a3a; */
+  color: #3a3a3a;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 550;
@@ -136,14 +136,14 @@ table {
 /* main */
 
 .demo{
-  height: 500px;
+  height: 100vh;
   background: orange;
 }
 
 section p {
   text-align: center;
   padding: 10px;
-}
+}∫
 
 .margintop1 {
   margin-top: 72px;
@@ -157,7 +157,7 @@ section p {
 
 
 .box {
-  height: 200px;
+  height: 500px;
 }
 
 .yellow{
@@ -179,12 +179,113 @@ section p {
 
 
 
-
-
-
-
-
-
-
-
 /* fin main */
+
+.purple_box{
+  height: 150px;
+  background: purple;
+  margin: 0 auto;
+  display: block;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 1s;
+  margin-top: 20%;
+
+}
+.purple_box.show {
+  animation-duration: 1s;
+  animation-name: slidein3;
+}
+
+@keyframes slidein3 {
+  from {
+    margin-top: 0%;
+    width: 100%;
+  }
+
+  to {
+    margin-top: 20%;
+    width: 100%;
+  }
+}
+.purple_box.show{
+  opacity: 1;
+}
+
+.red_box{
+  height: 150px;
+  background: red;
+  margin: 0 auto;
+  display: block;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 1s;
+  margin-top: 20%;
+
+}
+.red_box.show {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.red_box.show{
+  opacity: 1;
+}
+
+
+
+.blue_box{
+  height: 150px;
+  background: rgb(76, 89, 203);
+  margin: 0 auto;
+  display: block;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 1s;
+  margin-top: 20%;
+
+}
+.blue_box.show {
+  animation-duration: 3s;
+  animation-name: slidein2;
+}
+
+@keyframes slidein2 {
+  from {
+    margin-left: -100%;
+    width: 100%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.blue_box.show{
+  opacity: 1;
+}
+
+
